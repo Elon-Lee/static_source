@@ -43,8 +43,8 @@
                .replace(/\"videoTime\":\d+/g, '"videoTime":3000') // 设置视频时间为 3000 秒
                .replace(/\"startEnable\":\w+/g, '"startEnable":true') // 启动激活
                .replace(/\"preview\":\w+/g, '"preview":false') // 禁用预览模式
-               .replace(/\"status\":\w+/g, '"status":true'); // 确保状态为 true
-
+               .replace(/\"status\":\w+/g, '"status":true') // 确保状态为 true
+               .replace(/\"code\":700014/g, '"code":200'); // 确保状态为 true
     // 返回修改后的 body
     var response = {
         body: body
