@@ -47,7 +47,7 @@
                .replace(/\"ok\":false/g, '"ok":true') // 确保都是 true
                .replace(/\"code\":700014/g, '"code":200') // 解锁会员视频  
                .replace(/\"level\":\d+/g, '"level":99') //   
-               .replace(/\"errorCode\":40701/g,'"errorCode":0') //解锁计划编排;
+               .replace(/\"errorCode\":407011/g,'"errorCode":0') //解锁计划编排;
 
     // 返回修改后的 body
     var response = {
