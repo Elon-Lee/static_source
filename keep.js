@@ -46,7 +46,9 @@
                .replace(/\"status\":false/g, '"status":true') // 确保都是 true
                .replace(/\"ok\":false/g, '"ok":true') // 确保都是 true
                .replace(/\"code\":700014/g, '"code":200') // 解锁会员视频  
-               .replace(/\"level\":\d+/g, '"level":99') //   
+               .replace(/\"level\":\d+/g, '"level":10') //   
+               .replace(/\"memberValid\":false/g, '"memberValid":true') //当日计划
+               .replace(/\"memberOffDays\":0/g, '"memberOffDays":300') //当日计划
                .replace(/\"errorCode\":407011/g,'"errorCode":0') //解锁计划编排;
 
     // 返回修改后的 body
