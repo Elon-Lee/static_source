@@ -49,7 +49,6 @@
     var response = {
         body: body
     };
-    console.log("keep interceptor:",body)
 
     $done(response);
 })();
