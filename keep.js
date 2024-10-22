@@ -44,9 +44,10 @@
                .replace(/\"startEnable\":\w+/g, '"startEnable":true') // 启动激活
                .replace(/\"preview\":\w+/g, '"preview":false') // 禁用预览模式
                .replace(/\"status\":false/g, '"status":true') // 确保都是 true
+               .replace(/\"ok\":false/g, '"ok":true') // 确保都是 true
                .replace(/\"code\":700014/g, '"code":200') // 解锁会员视频  
                .replace(/\"level\":\d+/g, '"level":99') //   
-               .replace(/\"code\":40701/g,'"code":200') //解锁计划编排;
+               .replace(/\"errorCode\":40701/g,'"errorCode":0') //解锁计划编排;
 
     // 返回修改后的 body
     var response = {
