@@ -49,6 +49,7 @@
     var response = {
         body: body
     };
+    console.log("keep response body:",response)
 
     $done(response);
 })();
