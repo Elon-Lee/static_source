@@ -43,10 +43,10 @@
                .replace(/\"videoTime\":\d+/g, '"videoTime":3000') // 设置视频时间为 3000 秒
                .replace(/\"startEnable\":\w+/g, '"startEnable":true') // 启动激活
                .replace(/\"preview\":\w+/g, '"preview":false') // 禁用预览模式
-               .replace(/\"errorCode\":700014/g, '"status":200') // 解锁会员视频  
+               .replace(/\"code\":700014/g, '"status":200') // 解锁会员视频  
                .replace(/\"status\":01/g, '"status":200') // 解锁会员视频  
                .replace(/\"level\":\d+/g, '"level":99') //   
-               .replace(/\"errorCode\":40701/g,'"status":200') ;
+               .replace(/\"code\":40701/g,'"status":200') //解锁计划编排;
 
     // 返回修改后的 body
     var response = {
