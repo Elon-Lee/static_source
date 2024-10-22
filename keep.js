@@ -35,7 +35,7 @@
 
     // 处理 API 响应的 body
     var body = $response.body;
-
+    var body_orginal = body
     // 替换相关字段
     body = body.replace(/\"memberStatus":\d+/g, '"memberStatus":1') // 修改会员状态为 1
                .replace(/\"username":".*?"/g, '"username":"你最🐂B你最帅"') // 设置用户名
@@ -43,16 +43,16 @@
                .replace(/\"videoTime\":\d+/g, '"videoTime":3000') // 设置视频时间为 3000 秒
                .replace(/\"startEnable\":\w+/g, '"startEnable":true') // 启动激活
                .replace(/\"preview\":\w+/g, '"preview":false') // 禁用预览模式
-               .replace(/\"errorCode\":700014/g, '"status":0') // 解锁会员视频  
-               .replace(/\"status\":01/g, '"status":0') // 解锁会员视频  
-               .replace(/\"level\":\d+/g, '"level":99') // 确保状态为  
-               .replace(/\"errorCode\":40701/g,'"status":0') ;
+               .replace(/\"errorCode\":700014/g, '"status":200') // 解锁会员视频  
+               .replace(/\"status\":01/g, '"status":200') // 解锁会员视频  
+               .replace(/\"level\":\d+/g, '"level":99') //   
+               .replace(/\"errorCode\":40701/g,'"status":200') ;
 
     // 返回修改后的 body
     var response = {
         body: body
     };
-    console.log(`keep response body: ${JSON.stringify(response)}`)
+    console.log(`keep before modify : ${body_orginal} response body: ${body}`)
 
     $done(response);
 })();
