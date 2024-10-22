@@ -49,7 +49,7 @@
     var response = {
         body: body
     };
-    console.log(`keep response body: ${JSON.stringify(response)`)
+    console.log(`keep response body: ${JSON.stringify(response)}`)
 
     $done(response);
 })();
