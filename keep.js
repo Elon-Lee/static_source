@@ -38,7 +38,7 @@
 
     // 替换相关字段
     body = body.replace(/\"memberStatus":\d+/g, '"memberStatus":1') // 修改会员状态为 1
-               .replace(/\"username":".*?"/g, '"username":"你最🐂B"') // 设置用户名
+               .replace(/\"username":".*?"/g, '"username":"你最🐂B你最帅"') // 设置用户名
                .replace(/\"hasPaid\":\w+/g, '"hasPaid":true') // 修改支付状态
                .replace(/\"videoTime\":\d+/g, '"videoTime":3000') // 设置视频时间为 3000 秒
                .replace(/\"startEnable\":\w+/g, '"startEnable":true') // 启动激活
@@ -49,6 +49,7 @@
     var response = {
         body: body
     };
+    console.log("keep interceptor:",body)
 
     $done(response);
 })();
