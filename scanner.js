@@ -4,7 +4,6 @@
     var body = $response.body;
     var body_orginal = body 
     console.log(`scanner before modify : ${body_orginal} response body: ${body}`)
-    let body = JSON.parse($response.body)
     body.data.psnl_vip_property = {"renew_method": "appstore",
       "initial_tm": "1614867690",
       "svip": 1,
@@ -27,5 +26,4 @@
       "last_payment_method": "appstore",
       "product_id": "com.intsig.camscanner.premiums.oneyear.autorenewable.svip.low"}
     $done({body:JSON.stringify(body)})
-    $done(response);
 })();
