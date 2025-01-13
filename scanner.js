@@ -1,12 +1,12 @@
 (function() {
      // 处理 API 响应的 body
-    var body = JSON.parse($response.body);  
-    
+    //var body = JSON.parse($response.body);  
+    var body  = {"data":{"points":"0","immt_expy_points":"0","add_watermarks_balance":"100000","used_points":"0","greetcard_list":{"CamScanner_PayGreetCard_1":"0","CamScanner_PayGreetCard_2":"0","CamScanner_PayGreetCard_3":"0","CamScanner_PayGreetCard_4":"0","CamScanner_PayGreetCard_5":"0","CamScanner_PayGreetCard_6":"0","CamScanner_NONVIP_PayGreetCard_1":"0","CamScanner_NONVIP_PayGreetCard_2":"0","CamScanner_NONVIP_PayGreetCard_3":"0","greeting_card_1":"0","greeting_card_2":"0","greeting_card_3":"0","greeting_card_4":"0","greeting_card_5":"0","greeting_card_6":"0","greeting_card_9":"0","greeting_card_10":"0","greeting_card_11":"0"},"points_exchange_cfgrs":{"CamScanner_Excel":500,"CamScanner_Watermarks":50,"CamScanner_Pdfword":500,"CamScanner_Pdf2excel":500,"CamScanner_Pdf2ppt":500,"CamScanner_Sign":500,"CamScanner_Profile_Card_Format":1000,"CamScanner_AlbumImport":300,"CamScanner_ID_Card_Authenticity":500,"CamScanner_ID_Card_Credit":500,"CamScanner_CloudOCR":50,"CamScanner_CertMode":200,"CamScanner_CloudCap_1G":1000,"CamScanner_Translation":50},"CamScanner_RoadMap":495,"fax_balance":"0","watchad_vip_chance":"3","watchad_vip_chance_total":"3","CamScanner_Toolbox_Watermark":400,"server_time":"1736751810","psnl_vip_property":{"ms_first_pay":0,"group2_paid":0,"expiry":1742816394,"inherited_flag":0,"last_payment_method":"webshop","vip_type":"vip","is_trial_guide":"1","grade":4,"initial_tm":"1735040394","ys_first_pay":0,"in_trial":0,"svip":0,"vip_level_info":{"create_time":1735040394,"level":1,"next_score":600,"score":90,"start_score":1},"group1_paid":1,"pc_vip":0,"level_info":{"level":1,"days":21,"end_days":30},"auto_renewal":false,"pending":0},"balance_recolor":200,"no_login_ocr_balance":2,"CamScanner_Intellect_Erase":999,"bookmode_balance":100000,"CamScanner_Bills_Verify":50,"dir":{"user_layer_num":6,"license_total_num":1000,"license_layer_num":4,"single_layer_num":3,"advanced_folder_num":100,"advanced_folder_layer":6,"new_layer_num":4,"total_num":8,"edu_layer_num":6,"edu_total_num":1000,"vip_layer_num":6,"vip_total_num":5000,"normal_vip_total_num":10,"normal_vip_layer_num":6,"user_total_num":500},"vip_imagerestore_balance":1000,"cert_mode_balance":"200","patting_balance":100000,"vip_balance_recolor":1000,"balance_demoire":1000,"trans_balance":500,"upload_pdf_balance":"100000","ocr_balance":1002,"removead":"0","watermarks_balance":99960,"pdfword_balance":"100000","login_ocr_balance":4,"ai_imagefilter_balance":"983","excel_balance":"500","CamScanner_Erase":1000,"imagerestore_balance":1000},"ret":"0"} 
     // 返回修改后的 body
     var response = {
         body: JSON.stringify(body)
     };
-    console.log(`scanner after response  : ${JSON.stringify(body)} `)
+    console.log(`scanner after response modify : ${JSON.stringify(body)} `)
     $done(response);
     
 })();
