@@ -5,8 +5,7 @@
     var body_orginal = body
     // 替换相关字段
     body = body.replace(/\"hasPurchase":false/g, '"hasPurchase":true') // 修改会员状态为 1
-               .replace("2021-09-20", '2099-09-20')
-               .replace("20", '10000')// 设置用户名
+               .replace("2021-09-20", '2099-09-20')// 设置用户名
     // 返回修改后的 body
     var response = {
         body: body
